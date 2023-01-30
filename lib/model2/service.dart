@@ -11,13 +11,13 @@ class ProductService{
   var response = await http.get(Uri.parse(url));
   if(response.statusCode == 200){
     var jsonData = jsonDecode(response.body);
-    print(jsonData);
 
     final ProductModel model = ProductModel.fromJson(jsonData);
-    print(model.products[0].title);
     return model;
   }
-  else throw "errorrrr";
+  else {
+    throw "errorrrr";
+  }
 }
 
 }

@@ -39,7 +39,7 @@ class _AppBodyState extends State<AppBody> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('API REQUESTS'),
+        title: const Text('Users'),
       ),
       body: (_isLoading)
           ? const Center(child: CircularProgressIndicator())
@@ -54,11 +54,6 @@ class _AppBodyState extends State<AppBody> {
                 trailing: Text("id: ${myUser?.data[index].id}"),
               );
             }),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          ModelService().makeCall();
-        },
-      ),
     );
   }
 }

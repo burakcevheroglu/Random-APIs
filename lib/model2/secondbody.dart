@@ -34,7 +34,7 @@ class _SecondBodyState extends State<SecondBody> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('SECOND API REQUEST'),
+        title: const Text('Products'),
       ),
       body: (_loading) ? const Center(child: CircularProgressIndicator()):
       ListView.builder(
